@@ -31,6 +31,26 @@ public class Problem4 extends BaseClass {
         
         for(int i = 0; i <arr.length; i++){
             // Start Solution Edits
+
+            String cleaned= arr[i].replaceAll("[^a-zA-Z0-9 ]", "").trim();
+            String[] words= cleaned.toLowerCase().split("\\s+");
+        
+
+            for(String w: words) placeholderForModifiedPhrase += w.substring(0,1).toUpperCase()+ w.substring(1)+" ";
+            placeholderForModifiedPhrase= placeholderForModifiedPhrase.trim();
+
+            
+            if (placeholderForModifiedPhrase.length() <= 2) {
+                placeholderForModifiedPhrase= "Not enough Characters";
+
+            } else {
+                int mid= placeholderForModifiedPhrase.length()/2;
+                int start = Math.max(1,mid -1);
+                int end= Math.min(placeholderForModifiedPhrase.length() -1, start +3);
+                placeholderForMiddleCharacters = placeholderForModifiedPhrase.substring(start,end);
+            }
+
+
             
              // End Solution Edits
             System.out.println(String.format("Index[%d] \"%s\" | Middle: \"%s\"",i, placeholderForModifiedPhrase, placeholderForMiddleCharacters));

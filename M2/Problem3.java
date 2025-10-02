@@ -6,6 +6,7 @@ public class Problem3 extends BaseClass {
     private static final Float[] array3 = {1.1f, -2.2f, 3.3f, -4.4f, 5.5f, -6.6f, 7.7f, -8.8f};
     private static final String[] array4 = {"123", "-456", "789.01", "-234.56", "0.00001", "-99999999"};
     private static final Object[] array5 = {-1, 1, 2.0f, -2.0d, "3", "-3.0"};
+    @SuppressWarnings("empty-statement")
     private static void bePositive(Object[] arr, int arrayNumber) {
         // Only make edits between the designated "Start" and "End" comments
         printArrayInfo(arr, arrayNumber);
@@ -18,6 +19,29 @@ public class Problem3 extends BaseClass {
         Object[] output = new Object[arr.length];
         // Start Solution Edits
         
+        
+        for (int i  =0; i< arr.length; i++){
+            Object val= arr[i];
+ 
+            if(val instanceof Integer) {
+                output[i]=Math.abs((Integer) val);
+            } else if (val instanceof Double){
+                output[i]=Math.abs((Double) val);
+            } else if (val instanceof Float) {
+                output[i]=Math.abs((Float) val);
+            } else if (val instanceof String) {
+
+                double num=Double.parseDouble((String) val);
+                output[i]=String.valueOf(Math.abs(num));
+
+            } else {
+                output[i]=val;
+                
+            }
+
+
+
+        }
 
         // End Solution Edits
         System.out.println("Output: ");

@@ -19,7 +19,7 @@ public class Problem1 extends BaseClass {
         System.out.print("Output Array : ");
         
         String odds ="";
-
+        //the odds string concatonates the numbers that are odd and prints them in the output array 
         for (int i = 0; i < arr.length; i++)
         {
             if (arr[i] % 2 == 1)

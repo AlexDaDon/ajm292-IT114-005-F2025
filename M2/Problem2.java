@@ -9,7 +9,9 @@ public class Problem2 extends BaseClass {
             Math.log10(3) };
 
     private static void sumValues(double[] arr, int arrayNumber) {
-        // Only make edits between the designated "Start" and "End" comments
+        // Only make edits between the designated "Start" and "End" comments 
+        //edits finalized 11:30 am 
+
         printArrayInfo(arr, arrayNumber);
 
         // Challenge 1: Sum all the values of the passed in array and assign to `total`
@@ -21,7 +23,7 @@ public class Problem2 extends BaseClass {
         double total = 0;
         // Start Solution Edits
         // Solve Challenge 1 here
-
+// this for loop looks for a double variable inside the array and if for each time its true, its added to the total variable 
          for (double val:arr){
             total+=val;
 
@@ -31,9 +33,9 @@ public class Problem2 extends BaseClass {
         
       
         // Solve Challenge 2 here
-
+// the line below takes the number and formats it to have a two decimal places as a double variable 
         String modifiedTotal=String.format("%.2f",total);
-        
+
         
 
         // End Solution Edits
