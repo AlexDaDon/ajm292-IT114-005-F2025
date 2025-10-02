@@ -1,10 +1,10 @@
 package M2;
 
 public class Problem1 extends BaseClass {
-    private static int[] array1 = {0,1,2,3,4,5,6,7,8,9};   
-    private static int[] array2 = {9,8,7,6,5,4,3,2,1,0};
-    private static int[] array3 = {0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9};
-    private static int[] array4 = {9,9,8,8,7,7,6,6,5,5,4,4,3,3,2,2,1,1,0,0}; 
+    private static final int[] array1 = {0,1,2,3,4,5,6,7,8,9};   
+    private static final int[] array2 = {9,8,7,6,5,4,3,2,1,0};
+    private static final int[] array3 = {0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9};
+    private static final int[] array4 = {9,9,8,8,7,7,6,6,5,5,4,4,3,3,2,2,1,1,0,0}; 
     private static void printOdds(int[] arr, int arrayNumber){
         // Only make edits between the designated "Start" and "End" comments
         printArrayInfo(arr, arrayNumber);
@@ -13,20 +13,29 @@ public class Problem1 extends BaseClass {
         // Step 1: sketch out plan using comments (include ucid and date)
         // Step 2: Add/commit your outline of comments (required for full credit)
         // Step 3: Add code to solve the problem (add/commit as needed)
-        System.out.print("Output Array: ");
+        
         // Start Solution Edits
         // this for loop searches the array for the value that does not have a remainder of zero meaning its a odd numnber 
+        System.out.print("Output Array : ");
+        
+        String odds ="";
 
-            for (int i=0; i< arr.length; i++) {
-                if (arr[i] % 2 !=0) {
-                    System.out.print(arr[i]);
-                    if (i< arr.length -1){
-                        System.out.print ('-');
-
-
-                    }
-                }
+        for (int i = 0; i < arr.length; i++)
+        {
+            if (arr[i] % 2 == 1)
+            {
+                odds = odds + arr[i] + ",";
             }
+        }
+        //for (int i=0; i<arr.length; i++) {
+        //    if (arr[i] % 2 !=0){
+        //        if (!odd.isEmpty()){
+        //            odd +=",";
+         //       }
+         //       odd += arr[i];
+        //    }
+       // }
+        System.out.print(odds);       
 
         // End Solution Edits
         System.out.println("");
