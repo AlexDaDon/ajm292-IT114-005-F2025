@@ -31,18 +31,19 @@ public class Problem4 extends BaseClass {
         
         for(int i = 0; i <arr.length; i++){
             // Start Solution Edits
-
+            // the line below takes a string and deletes any index that isnt a letter or a Number 
             String cleaned= arr[i].replaceAll("[^a-zA-Z0-9 ]", "").trim();
+            //the line takes the string and places them into a array and makes them lowercase 
             String[] words= cleaned.toLowerCase().split("\\s+");
         
-
+            // this line  takes the word and amkes the first index of the word Upper case and keeps the rest lowercase
             for(String w: words) placeholderForModifiedPhrase += w.substring(0,1).toUpperCase()+ w.substring(1)+" ";
             placeholderForModifiedPhrase= placeholderForModifiedPhrase.trim();
 
-            
+            // line checks if the phrase is 2 characters or shorter, and if it is, it prints "not enough characters"
             if (placeholderForModifiedPhrase.length() <= 2) {
                 placeholderForModifiedPhrase= "Not enough Characters";
-
+                    //else statement takes the middle index of the word and stores it as a substring String --(PlaceholderForMiddlecharacters);
             } else {
                 int mid= placeholderForModifiedPhrase.length()/2;
                 int start = Math.max(1,mid -1);
@@ -63,7 +64,7 @@ public class Problem4 extends BaseClass {
     }
 
     public static void main(String[] args) {
-        final String ucid = "mt85"; // <-- change to your UCID
+        final String ucid = "ajm292"; // <-- change to your UCID
         // No edits below this line
         printHeader(ucid, 4);
 

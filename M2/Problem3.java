@@ -19,18 +19,20 @@ public class Problem3 extends BaseClass {
         Object[] output = new Object[arr.length];
         // Start Solution Edits
         
-        
+        // this for loop  goes through the array 
         for (int i  =0; i< arr.length; i++){
             Object val= arr[i];
- 
+            //checks if the value is a integer and if true, the absolute value is taken and assigned to output[i]
             if(val instanceof Integer) {
                 output[i]=Math.abs((Integer) val);
+                // if the value is a Double, the abs value is taken of the double then assigned 
             } else if (val instanceof Double){
                 output[i]=Math.abs((Double) val);
             } else if (val instanceof Float) {
                 output[i]=Math.abs((Float) val);
             } else if (val instanceof String) {
 
+                // if the value is a string, the line converts it into a double variable and made positve, 
                 double num=Double.parseDouble((String) val);
                 output[i]=String.valueOf(Math.abs(num));
 
